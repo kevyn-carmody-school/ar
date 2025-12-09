@@ -7,35 +7,29 @@
 	</head>
 	<body>
 		<a-scene embedded arjs>
-			<a-marker type="pattern" url="https://raw.githubusercontent.com/kevyn-carmody-school/ar/refs/heads/main/pattern-sus_marker.png.patt?scrlybrkr=92351473">
+			<a-marker type="pattern" url="https://raw.githubusercontent.com/kevyn-carmody-school/ar/refs/heads/main/pattern-L_marker.patt?scrlybrkr=92351473">
 
 			<!-- create your AR content here -->
 			
 				
 			
-			<a-box
-				color="#f60c0b"
-				rotation="0 0 -45"
-				position="-.2 -.35 1"
-
-			>
-			</a-box>
-			<a-cylinder
-				color="#358635"
-				radius="0.3"
+			<a-assets>
+				<a-asset-item id="myModel" src="atom_shell.glb"></a-asset-item>
+			</a-assets>
+		
+			<!-- display file -->
+			<a-entity gltf-model="#myModel"
+				color="#00FFFF"
 				position="-.2 .45 0"
 				rotation="-90 0 0"
-			>
-			</a-cylinder>
-			<a-cone
-				color="#f60c0b"
-				radius-bottom="0.5"
-				radius-top="0."
-				height=".5"
-				position="-.2 .51 -.7"
-				rotation="-90 0 0"
-			>
-			</a-cone>
+				animation="
+					property: rotation;
+					from: 0 0 0;
+					to: 0 0 360;
+					loop:true;
+					easing: linear;
+				"
+				></a-entity>
 			
 			
 			
