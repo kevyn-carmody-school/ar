@@ -23,6 +23,7 @@
 			
 		
 			<!-- display file -->
+				<!--
 				<a-entity gltf-model="#myModel"
 				position="-.2 .45 0"
 				rotation="-90 0 0"
@@ -62,8 +63,14 @@
 				rotation="-90 0 0"
 				position="0 0 -.5"
 				></a-text>
-				
-			
+				-->
+			<a-torus
+				animation="
+				property: rotation;
+				from: 0 0 0;
+				to: 0 360 0
+				"
+				></a-torus>
 			
 			</a-marker>
 
